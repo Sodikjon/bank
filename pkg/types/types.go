@@ -3,10 +3,10 @@ package types
 // Money представляет собой денежную сумму в минимальных единицах (центы, копейки, дирамы и т.д.)
 type Money int64
 
-// Currency представляет код валюты
+// Currency представляет код валюты.
 type Currency string
 
-// Коды валют
+// Коды валют.
 const (
 	TJS Currency = "TJS"
 	RUB Currency = "RUB"
@@ -14,10 +14,10 @@ const (
 	EUR Currency = "EUR"
 )
 
-// PAN представляет номер карты
+// PAN представляет номер карты.
 type PAN string
 
-// Card представляет информацию о платежной карте
+// Card представляет информацию о платежной карте.
 type Card struct {
 	ID       int
 	PAN      PAN
@@ -31,17 +31,17 @@ type Card struct {
 // Category представляет собой категорию, в которой был совершен платеж (авто, аптеки, рестораны и т.д.).
 type Category string
 
-// Status предстваляет собой статус платежа
+// Status предстваляет собой статус платежа.
 type Status string
 
-// Предопределенные статусы
+// Предопределенные статусы.
 const (
 	StatusOk         Status = "OK"
 	StatusFail       Status = "FAIL"
 	StatusInProgress Status = "INPROGRESS"
 )
 
-// Payment предстваляет информацию о платеже
+// Payment предстваляет информацию о платеже.
 type Payment struct {
 	ID       int
 	Amount   Money
