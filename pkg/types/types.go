@@ -31,9 +31,20 @@ type Card struct {
 // Category представляет собой категорию, в которой был совершен платеж (авто, аптеки, рестораны и т.д.).
 type Category string
 
+// Status предстваляет собой статус платежа
+type Status string
+
+// Предопределенные статусы
+const (
+	StatusOk         Status = "OK"
+	StatusFail       Status = "FAIL"
+	StatusInProgress Status = "INPROGRESS"
+)
+
 // Payment предстваляет информацию о платеже
 type Payment struct {
 	ID       int
 	Amount   Money
 	Category Category
+	Status   Status
 }
